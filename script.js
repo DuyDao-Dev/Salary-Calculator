@@ -97,4 +97,4 @@ function salaryCalc (){
 
 console.log(employeeArray);
 
-//note to self. You spell poorly when you're on this for 10 hours. 
+//testing Sunday 10:30AM 
