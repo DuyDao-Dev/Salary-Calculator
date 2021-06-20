@@ -35,15 +35,15 @@ let employee = {
 
 employeeArray.push(employee);
 salaryCalc();
+
 //draw the table
 markup = "<tr id=employeeRow"+employee.employeeID+">" //opening row tag, identify a row by the employeeID
-markup += "<td>"+employee.firstName+"</td>" // one cell in that row //first Name
-markup += "<td>"+employee.lastName+"</td>" // one cell in that row //Last Name
-markup += "<td>"+employee.employeeID+"</td>" // one cell in that row //first Name
-markup += "<td>"+employee.employeeTitle+"</td>" // one cell in that row //first Name
-markup += "<td>"+employee.annualSalary+"</td>" // one cell in that row //first Name
-markup += "<td> <button id="+employee.employeeID+" onClick='deleteRow(event)'>Delete</button></td>" // one cell in that row //Delete a  button
-
+    markup += "<td>"+employee.firstName+"</td>" // one cell in that row //first Name
+    markup += "<td>"+employee.lastName+"</td>" // one cell in that row //Last Name
+    markup += "<td>"+employee.employeeID+"</td>" // one cell in that row //ID Number
+    markup += "<td>"+employee.employeeTitle+"</td>" // one cell in that row //Title
+    markup += "<td>"+employee.annualSalary+"</td>" // one cell in that row //Annual Salary
+    markup += "<td> <button id="+employee.employeeID+" onClick='deleteRow(event)'>Delete</button></td>" // one cell in that row //Delete a  button
 markup += "</tr>"; // closing row tag
 tableBody = $("#employeeTable");
 tableBody.append(markup);
@@ -91,10 +91,17 @@ function salaryCalc (){
     currency: 'USD',}));//Got help with this since I couldn't figure out
     //how to do commas and decimal limit. Pretty cool that they have one
     //depending on the country you're in. 
-     
+    
+    //I need something to remove totalSalary when clicking on delete button or maybe create a function
+    //and nest it near the delete button to call upon. Tate did give a good idea where it would run a 
+    //function to the total salary of all employees. 
+    
+    //create an if condition where it changes the background to red if total monthly is over $20,000.
+    // // if (totalSalary > 20000){
+    // //     alert ('You are over the limit!');
+    // }
 }
 
 
 console.log(employeeArray);
 
-//testing Sunday 10:30AM 
