@@ -8,7 +8,7 @@ console.log(employeeArray);
 
 function onReady(){
     console.log("Starting the weekend challenge!");
-    
+
     $( '#submit' ).on( 'click', submitEmployee );
 }
 
@@ -29,29 +29,16 @@ employeeArray.push(employee);
 salaryCalc();
 
 //draw the table
-$('table').append('
-    <tr id=employeeRow"+employee.employeeID+">
-        <td>"+employee.firstName+"</td>
-        <td>"+employee.lastName+</td>
-        <td>"+employee.employeeID+</td>
-        <td>"+employee.employeeTitle+"</td>
-        <td>"+employee.annualSalary+"</td>
-        <td> <button id="+employee.employeeID+" onClick='deleteRow(event)'>Delete</button></td>
-    </tr>;
+markup = "<tr id=employeeRow"+employee.employeeID+">" //opening row tag, identify a row by the employeeID
+    markup += "<td>"+employee.firstName+"</td>" // one cell in that row //first Name
+    markup += "<td>"+employee.lastName+"</td>" // one cell in that row //Last Name
+    markup += "<td>"+employee.employeeID+"</td>" // one cell in that row //ID Number
+    markup += "<td>"+employee.employeeTitle+"</td>" // one cell in that row //Title
+    markup += "<td id= money>"+employee.annualSalary+"</td>" // one cell in that row //Annual Salary
+    markup += "<td> <button id="+employee.employeeID+" onClick='deleteRow(event)'>Delete</button></td>" // one cell in that row //Delete a  button
+markup += "</tr>"; // closing row tag
 tableBody = $("#employeeTable");
-tableBody.append(main);
-'); //Wanted to see if I could code this a different way. 
-
-// markup = "<tr id=employeeRow"+employee.employeeID+">" //opening row tag, identify a row by the employeeID
-//     markup += "<td>"+employee.firstName+"</td>" // one cell in that row //first Name
-//     markup += "<td>"+employee.lastName+"</td>" // one cell in that row //Last Name
-//     markup += "<td>"+employee.employeeID+"</td>" // one cell in that row //ID Number
-//     markup += "<td>"+employee.employeeTitle+"</td>" // one cell in that row //Title
-//     markup += "<td>"+employee.annualSalary+"</td>" // one cell in that row //Annual Salary
-//     markup += "<td> <button id="+employee.employeeID+" onClick='deleteRow(event)'>Delete</button></td>" // one cell in that row //Delete a  button
-// markup += "</tr>"; // closing row tag
-// tableBody = $("#employeeTable");
-// tableBody.append(markup);
+tableBody.append(markup);
 $('#firstName').val('');//is there a way to consolidate this?
 $('#lastName').val('');
 $('#employeeID').val('');
@@ -64,7 +51,7 @@ function deleteRow(e){
 	/* console.log(e.target.id) */
 	console.log('delete employee ID:' + e.target.id)
 $( "#employeeRow"+e.target.id).remove();
-
+$( '#monthlyCost'+e.target.id).remove();//Trying to deduct from monthly payment
 	//still need to find and remove from employeeArray
   //need to loop through employeeArray
   //find the employeeID that matches e.target.id
