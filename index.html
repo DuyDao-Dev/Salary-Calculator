@@ -10,6 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <h1>Salary Calculator</h1>
   <main class="submit-employee">
     <input type="first name" placeholder="First Name" id="firstName">
@@ -17,7 +18,11 @@
     <input type="Employee ID" placeholder="ID" id="employeeID">
     <input type="title" placeholder="Title" id="employeeTitle">
     <input type="salary" placeholder="Annual Salary" id="annualSalary">
-    <button id="submit">SUBMIT</button>
+    <!-- <button id="submit">SUBMIT</button> -->
+    <button type="button" class="btn btn-outline-submit btn-sm">SUBMIT</button>
+    <!-- //trying out some bootstrap code but this isn't working and the submit 
+      button won't outline. Also my selector in javascript in onReady isn't working.
+      Employee won't submit. -->
   </main>
   
   <table id="employeeTable">

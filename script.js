@@ -16,7 +16,7 @@ function onReady(){
     //Should also collect that information to calculate monthly cost of combined salaries 
     //***(so should divide by 12 to get month ly cost and display in DOM). Also needs to put a 
     //red background if > $20,000
-    $( '#submit' ).on( 'click', submitEmployee );
+    $( '.btn btn-outline-submit btn-sm' ).on( 'click', submitEmployee );
     //
 }
 
@@ -98,7 +98,7 @@ function salaryCalc (){
     
     //create an if condition where it changes the background to red if total monthly is over $20,000.
     // // if (totalSalary > 20000){
-    // //     alert ('You are over the limit!');
+    // //     alert ('You are over the limit!');// this works but we need to change background red.
     // }
 }
 
