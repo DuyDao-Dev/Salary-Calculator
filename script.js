@@ -36,6 +36,11 @@ markup = "<tr id=employeeRow"+employee.employeeID+">" //opening row tag, identif
     markup += "<td>"+employee.employeeTitle+"</td>" // one cell in that row //Title
     markup += "<td id= money>"+employee.annualSalary+"</td>" // one cell in that row //Annual Salary
     markup += "<td> <button id="+employee.employeeID+" onClick='deleteRow(event)'>Delete</button></td>" // one cell in that row //Delete a  button
+    // $('#employeeRow').on('click', employee.employeeID, function(){
+    // $(this).closest ('td').remove ();//tried removing employee.eployeeID from
+    //delete button and use this on click line of code but did not work.
+    //I also did find it weird that when I removed the button alltogether
+    //that the button was still there.
 markup += "</tr>"; // closing row tag
 tableBody = $("#employeeTable");
 tableBody.append(markup);
