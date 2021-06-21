@@ -51,7 +51,6 @@ function deleteRow(e){
 	/* console.log(e.target.id) */
 	console.log('delete employee ID:' + e.target.id)
 $( "#employeeRow"+e.target.id).remove();
-$( '#monthlyCost'+e.target.id).remove();//Trying to deduct from monthly payment
 	//still need to find and remove from employeeArray
   //need to loop through employeeArray
   //find the employeeID that matches e.target.id
